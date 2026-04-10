@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Silver Dog Training App",
+    "slug": "d98e3b4a-4687-42d5-9b6f-8d0ccb88677a",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "silverdogtrainingapp.d98e3b4a-4687-42d5-9b6f-8d0ccb88677a",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need access to your camera to take photos and videos.",
+        "NSContactsUsageDescription": "This app does not use your contacts.",
+        "NSCalendarsUsageDescription": "This app does not use your calendar.",
+        "NSCalendarsFullAccessUsageDescription": "This app does not use your calendar.",
+        "NSRemindersUsageDescription": "This app does not use your reminders.",
+        "NSRemindersFullAccessUsageDescription": "This app does not use your reminders.",
+        "NSMicrophoneUsageDescription": "We need access to your microphone to record audio.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to select photos and videos.",
+        "NSPhotoLibraryAddUsageDescription": "We need access to your photo library to save photos and videos.",
+        "NSLocationWhenInUseUsageDescription": "This app does not use your location.",
+        "NSLocationAlwaysUsageDescription": "This app does not use your location.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app does not use your location.",
+        "NSSpeechRecognitionUsageDescription": "This app does not use your speech recognition.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.createinc.d98e3b4a468742d59b6f8d0ccb88677a"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {}
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
