@@ -29,7 +29,9 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: 📦 Install dependencies
-        run: yarn install
+        run: |
+          yarn config set "strict-ssl" false -g
+          yarn install
 
       - name: 🏗 Setup EAS CLI
         run: npm install -g eas-cli
