@@ -5,9 +5,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "silverdogtrainingapp.d98e3b4a-4687-42d5-9b6f-8d0ccb88677a",
+    "scheme": "silverdogtrainingapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -29,6 +29,8 @@
       "bundleIdentifier": "com.createinc.d98e3b4a468742d59b6f8d0ccb88677a"
     },
     "android": {
+      "package": "com.createinc.d98e3b4a468742d59b6f8d0ccb88677a",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -51,9 +53,20 @@
         }
       ],
       "expo-audio",
-      "expo-build-properties",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 24,
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0"
+          }
+        }
+      ],
       "expo-font",
       "expo-secure-store",
+      "expo-speech-recognition",
       "expo-video",
       "expo-web-browser"
     ],
