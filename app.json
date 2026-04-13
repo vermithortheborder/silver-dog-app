@@ -35,7 +35,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -61,22 +64,26 @@
             "minSdkVersion": 24,
             "compileSdkVersion": 34,
             "targetSdkVersion": 34,
-            "buildToolsVersion": "34.0.0"
-          }
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
+            "buildToolsVersion": "34.0.0",
             "enableMultiDex": true,
-            "extragradleargs": ["-Dorg.gradle.jvmargs=-Xmx4096m"]
+            "extraGradleProperties": {
+              "org.gradle.jvmargs": "-Xmx4096m"
+            }
           }
         }
       ],
       "expo-font",
       "expo-secure-store",
-      "expo-speech-recognition",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow Silver Dog Training App to use the microphone.",
+          "speechRecognitionPermission": "Allow Silver Dog Training App to use speech recognition.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
+        }
+      ],
       "expo-video",
       "expo-web-browser"
     ],
