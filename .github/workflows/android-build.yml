@@ -28,10 +28,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: 📦 Install dependencies
-        run: |
-          npm cache clean --force
-          rm -rf node_modules
-          npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
       - name: 🛠 Prebuild Android
         run: npx expo prebuild --platform android --no-install
@@ -40,7 +37,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease --stacktrace
+          ./gradlew assembleRelease --no-daemon
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
@@ -48,4 +45,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: android-apk
-          path: android/app/build/outputs/apk/release/*.apk
+          path: |
+            android/app/build/outputs/apk/release/*.apk
+            android/app/build/outputs/apk/debug/*.apk

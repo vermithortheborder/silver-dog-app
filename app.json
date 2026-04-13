@@ -65,6 +65,15 @@
           }
         }
       ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMultiDex": true,
+            "extragradleargs": ["-Dorg.gradle.jvmargs=-Xmx4096m"]
+          }
+        }
+      ],
       "expo-font",
       "expo-secure-store",
       "expo-speech-recognition",
