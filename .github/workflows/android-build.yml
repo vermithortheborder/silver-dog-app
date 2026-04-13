@@ -33,6 +33,12 @@ jobs:
       - name: 🛠 Prebuild Android
         run: npx expo prebuild --platform android --no-install
 
+      - name: ⚡ Tune Gradle Performance
+        run: |
+          echo "org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m" >> android/gradle.properties
+          echo "android.enableJetifier=true" >> android/gradle.properties
+          echo "android.useAndroidX=true" >> android/gradle.properties
+
       - name: 🔨 Build APK with Gradle
         run: |
           cd android
