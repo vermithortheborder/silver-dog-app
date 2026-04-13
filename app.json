@@ -65,10 +65,7 @@
             "compileSdkVersion": 34,
             "targetSdkVersion": 34,
             "buildToolsVersion": "34.0.0",
-            "enableMultiDex": true,
-            "extraGradleProperties": {
-              "org.gradle.jvmargs": "-Xmx4096m"
-            }
+            "enableMultiDex": true
           }
         }
       ],
