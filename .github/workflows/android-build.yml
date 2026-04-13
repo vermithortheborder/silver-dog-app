@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Eliminamos la caché automática para evitar el error de lockfile not found
 
       - name: ☕ Setup JDK 17
         uses: actions/setup-java@v4
@@ -29,9 +28,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: 📦 Install dependencies
-        run: |
-          yarn config set "strict-ssl" false -g
-          yarn install
+        run: npm install --legacy-peer-deps
 
       - name: 🏗 Setup EAS CLI
         run: npm install -g eas-cli

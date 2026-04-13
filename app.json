@@ -9,6 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": false,
     "ios": {
+
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "We need access to your camera to take photos and videos.",
